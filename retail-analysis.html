@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Retail Sales & Returns Analysis | Ajiku Iyaniwura Dunmininu</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7fa;
+            color: #1a2e4a;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #1a2e4a;
+            color: white;
+            padding: 55px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        h2 {
+            color: #1a2e4a;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+
+        .metric {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .metric strong {
+            display: block;
+            font-size: 25px;
+            color: #e8521a;
+            margin-bottom: 5px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .tools span {
+            display: inline-block;
+            background: #1a2e4a;
+            color: white;
+            padding: 8px 14px;
+            border-radius: 20px;
+            margin: 5px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 20px;
+            color: #e8521a;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #1a2e4a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Retail Sales & Returns Analysis</h1>
+    <p>PostgreSQL • Power BI • Power Query • DAX</p>
+</header>
+
+<section>
+
+    <div class="card">
+        <h2>Project Overview</h2>
+
+        <p>
+            This end-to-end retail analytics project examines sales performance,
+            order activity, customer behavior, and product returns using a
+            retail transaction dataset containing 49,222 records.
+        </p>
+
+        <p>
+            I used PostgreSQL for data validation and analysis, then used
+            Power Query and Power BI to prepare the data, create analytical
+            measures, and develop an interactive dashboard.
+        </p>
+    </div>
+
+    <h2>Key Metrics</h2>
+
+    <div class="metrics">
+
+        <div class="metric">
+            <strong>49.22K</strong>
+            Total Orders
+        </div>
+
+        <div class="metric">
+            <strong>₦3.44M</strong>
+            Total Sales
+        </div>
+
+        <div class="metric">
+            <strong>₦69.99</strong>
+            Average Order Value
+        </div>
+
+        <div class="metric">
+            <strong>3.06%</strong>
+            Return Rate
+        </div>
+
+    </div>
+
+    <div class="card">
+        <h2>Business Questions</h2>
+
+        <ul>
+            <li>How much sales revenue was generated?</li>
+            <li>How many orders were completed, cancelled, or returned?</li>
+            <li>How did sales change over time?</li>
+            <li>Which product categories and cities generated the most sales?</li>
+            <li>Which payment methods contributed most to sales?</li>
+            <li>What products and locations were associated with returned orders?</li>
+            <li>How much sales value was associated with returned orders?</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Data Preparation & Validation</h2>
+<ul>
+            <li>Validated 49,222 transaction records.</li>
+            <li>Checked for duplicate Order IDs.</li>
+            <li>Checked for missing values and data-quality issues.</li>
+            <li>Investigated negative and zero-value transactions.</li>
+            <li>Retained legitimate transaction adjustments rather than deleting them without investigation.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>PostgreSQL Analysis</h2>
+
+        <p>
+            PostgreSQL was used to validate the dataset and answer key
+            business questions before visualization.
+        </p>
+
+        <ul>
+            <li>Sales and order performance by status.</li>
+            <li>Sales performance across years and time periods.</li>
+            <li>Customer spending and repeat-customer analysis.</li>
+            <li>Category and city performance.</li>
+            <li>Payment-method analysis.</li>
+            <li>Returned-order analysis.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Power BI Dashboard</h2>
+
+        <p>
+            The Power BI report contains two analytical pages:
+        </p>
+
+        <ul>
+            <li><strong>Sales Overview</strong> — overall sales, orders, trends, categories, cities, payment methods, and customer segments.</li>
+            <li><strong>Returned Orders Analysis</strong> — return rate, returned sales, return trends, cities, categories, products, payment methods, and order-level details.</li>
+        </ul>
+
+        <p>
+            Interactive slicers allow users to explore the data by city,
+            category, order status, and date.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Key Findings</h2>
+
+        <ul>
+            <li>Completed orders accounted for 91.98% of all orders.</li>
+            <li>Completed orders generated approximately ₦3.16M in sales.</li>
+            <li>Returned orders represented 3.06% of total orders.</li>
+            <li>Returned sales amounted to approximately ₦101.82K.</li>
+            <li>Tablets recorded the highest returned sales among the top returned products at approximately ₦10.44K.</li>
+            <li>Gateway payments accounted for approximately ₦52.59K of returned sales.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Tools</h2>
+
+        <div class="tools">
+            <span>PostgreSQL</span>
+            <span>Power BI</span>
+            <span>Power Query</span>
+            <span>DAX</span>
+        </div>
+    </div>
+
+    <a class="back" href="index.html">← Back to Portfolio</a>
+
+</section>
+
+<footer>
+    <p>© 2026 Ajiku Iyaniwura Dunmininu | Data Analyst Portfolio</p>
+</footer>
+
+</body>
+</html>
