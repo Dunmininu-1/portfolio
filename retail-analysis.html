@@ -220,17 +220,34 @@
          alt="PostgreSQL customer tenure and spending analysis"
          style="width:100%; height:auto; border-radius:10px; margin-top:15px;">
 </div>
-    <div class="card">
-    <h3>Data Quality Summary</h3>
+  <div class="card">
+    <h3>Data Quality Investigation</h3>
 
     <p>
-        The data quality was inconsistent with negatives values with quantity has 18 negative values in total,
-        and the sales with the order value has 19 negative values.
+        I investigated unusual transaction values to identify potential
+        data-quality issues before analysis. The review found negative
+        and zero-value transactions, which were examined rather than
+        removed without investigation.
+    </p>
+
+    <ul>
+        <li>18 transactions with negative quantity</li>
+        <li>19 transactions with negative sales</li>
+        <li>19 transactions with negative order value</li>
+        <li>5 transactions with zero quantity, sales, and order value</li>
+    </ul>
+
+    <p>
+        Further investigation showed that the negative-sales transactions
+        included records with a Completed status, highlighting the
+        importance of validating unusual values before making business
+        decisions.
     </p>
 
     <img src="data-quality-summary.png"
-         alt="PostgreSQL data quality summary analysis"
+         alt="PostgreSQL data quality investigation"
          style="width:100%; height:auto; border-radius:10px; margin-top:15px;">
+</div>
 </div>
     <div class="card">
     <h3>Category Issue Rate</h3>
