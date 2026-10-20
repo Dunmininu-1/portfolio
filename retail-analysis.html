@@ -172,12 +172,13 @@ The project demonstrates my approach to data quality, exploratory analysis,
     <div class="card">
         <h2>Data Preparation & Validation</h2>
 <ul>
-            <li>Validated 49,222 transaction records.</li>
-            <li>Checked for duplicate Order IDs.</li>
-            <li>Checked for missing values and data-quality issues.</li>
-            <li>Investigated negative and zero-value transactions.</li>
-            <li>Retained legitimate transaction adjustments rather than deleting them without investigation.</li>
-        </ul>
+
+    <li>Validated 49,222 transaction records and confirmed that all Order IDs were present and unique.</li>
+    <li>Checked for duplicate records, missing values and potential data-quality issues.</li>
+    <li>Identified 18 transactions with negative quantities and 19 transactions with negative sales and negative order values.</li>
+    <li>Investigated transactions with zero values and negative values rather than removing them without understanding their context.</li>
+    <li>Compared transaction statuses and examined unusual records, including negative-sales transactions marked as Completed.</li>
+</ul>
     </div>
 
     <div class="card">
